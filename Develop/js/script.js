@@ -22,6 +22,8 @@ if ((length >= 8) && (length <= 128)) {
     function getRandomLower() {
       return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
     }
+    selectedFunctionsArray.push(getRandomLower);
+    console.log("selectedFunctionsArray", selectedFunctionsArray);
     // minimumLowerCases = functionArray.getRandomLower();
     // minimumCount++;
     console.log(getRandomLower);
@@ -32,6 +34,8 @@ if ((length >= 8) && (length <= 128)) {
     function getRandomUpper() {
       return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
     }
+    selectedFunctionsArray.push(getRandomUpper);
+    console.log("selectedFunctionsArray", selectedFunctionsArray);
     console.log(getRandomUpper);
     // minimumUpperCases = functionArray.getRandomUpper();
     // minimumCount++;
@@ -42,6 +46,8 @@ if ((length >= 8) && (length <= 128)) {
     function getRandomNumber() {
       return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
     }
+    selectedFunctionsArray.push(getRandomNumber);
+    console.log("selectedFunctionsArray", selectedFunctionsArray);
     console.log(getRandomNumber);
     // minimumNumbers = functionArray.getRandomNumber();
     // minimumCount++;
@@ -53,36 +59,27 @@ if ((length >= 8) && (length <= 128)) {
         const symbols = '!@#$%^&*(){}[]=<>?,.';
         return symbols[Math.floor(Math.random() * symbols.length)];
       }
+      selectedFunctionsArray.push(getRandomSymbol);
+    console.log("selectedFunctionsArray", selectedFunctionsArray);
       console.log(getRandomSymbol);
       // minimumSpecialCharacters = functionArray.getRandomSymbol();
       // minimumCount++;
     } else {
       alert("You pressed cancel!");
     };
-    //populate array
-    //create an array of functions
-    // function populateSelectionArray() {
-    //   if (lowerCaseLetters) {
-    //     push();
-    //   }
-    //   if (upperCaseLetters) {
-
-    //   }
-    // }
-    selectedFunctionsArray = [""];
-    selectedFunctionsArray.push('getRandomLower', 'getRandomUpper', 'getRandomNumber', 'getRandomSymbol');
-    console.log(selectedFunctionsArray);
+  if (selectedFunctionsArray.length) {
     for (var i = 0; i < (parseInt(length)); i++) {
-      //select a random index within array
-      //
-      const  = selectedFunctionsArray[Math.floor(Math.random() * selectedFunctionsArray.length)];
-      password = password + character;
-      // password += functionArray[getRandomNumber]();
-    }
-      passwordText.value = password; 
-    } else {
-      alert("Invalid response. You must pick a number between 8 and 128.");
-    }
+      var passwordText = selectedFunctionsArray[Math.floor(Math.random() * selectedFunctionsArray.length)];
+      password = password + character; }
+  } else {
+    alert("You need to select at least one user option!")
+  }
+  
+passwordText.value = password; 
+} else {
+  alert("Invalid response. You must pick a number between 8 and 128.");
+}
+  // password += functionArray[getRandomNumber]();
   }
   // var minimumCount = 0;
   // var minimumLowerCases = "";
