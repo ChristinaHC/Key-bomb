@@ -71,11 +71,11 @@ if ((length >= 8) && (length <= 128)) {
     // }
     selectedFunctionsArray = [""];
     selectedFunctionsArray.push('getRandomLower', 'getRandomUpper', 'getRandomNumber', 'getRandomSymbol');
-    console.log(selectedFunctionsArrayLength);
     console.log(selectedFunctionsArray);
     for (var i = 0; i < (parseInt(length)); i++) {
       //select a random index within array
       //
+      const  = selectedFunctionsArray[Math.floor(Math.random() * selectedFunctionsArray.length)];
       password = password + character;
       // password += functionArray[getRandomNumber]();
     }
