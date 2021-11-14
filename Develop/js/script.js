@@ -61,14 +61,18 @@ if ((length >= 8) && (length <= 128)) {
     };
     //populate array
     //create an array of functions
-    function populateSelectionArray() {
-      if (lowerCaseLetters) {
-        push();
-      }
-      if (upperCaseLetters) {
+    // function populateSelectionArray() {
+    //   if (lowerCaseLetters) {
+    //     push();
+    //   }
+    //   if (upperCaseLetters) {
 
-      }
-    }
+    //   }
+    // }
+    selectedFunctionsArray = [""];
+    selectedFunctionsArray.push('getRandomLower', 'getRandomUpper', 'getRandomNumber', 'getRandomSymbol');
+    console.log(selectedFunctionsArrayLength);
+    console.log(selectedFunctionsArray);
     for (var i = 0; i < (parseInt(length)); i++) {
       //select a random index within array
       //
