@@ -1,9 +1,3 @@
-// Assignment code here
-var numOfChar = {
-  from: 8,
-  to: 128
-}
-
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 function userChoices() {
@@ -24,12 +18,9 @@ if ((length >= 8) && (length <= 128)) {
     }
     selectedFunctionsArray.push(getRandomLower);
     console.log("selectedFunctionsArray", selectedFunctionsArray);
-    // minimumLowerCases = functionArray.getRandomLower();
-    // minimumCount++;
     console.log(getRandomLower);
-  } else {
-    alert("You pressed cancel!");
   }
+
   if (upperCaseLetters === true) {
     function getRandomUpper() {
       return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
@@ -37,11 +28,8 @@ if ((length >= 8) && (length <= 128)) {
     selectedFunctionsArray.push(getRandomUpper);
     console.log("selectedFunctionsArray", selectedFunctionsArray);
     console.log(getRandomUpper);
-    // minimumUpperCases = functionArray.getRandomUpper();
-    // minimumCount++;
-  } else {
-    alert("You pressed cancel!");
   }
+
   if (numbers === true) {
     function getRandomNumber() {
       return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
@@ -49,11 +37,8 @@ if ((length >= 8) && (length <= 128)) {
     selectedFunctionsArray.push(getRandomNumber);
     console.log("selectedFunctionsArray", selectedFunctionsArray);
     console.log(getRandomNumber);
-    // minimumNumbers = functionArray.getRandomNumber();
-    // minimumCount++;
-  } else {
-    alert("You pressed cancel!");
   }
+
   if (specialCharacters === true) {
     function getRandomSymbol() {
         const symbols = '!@#$%^&*(){}[]=<>?,.';
@@ -61,63 +46,25 @@ if ((length >= 8) && (length <= 128)) {
       }
       selectedFunctionsArray.push(getRandomSymbol);
     console.log("selectedFunctionsArray", selectedFunctionsArray);
-      console.log(getRandomSymbol);
-      // minimumSpecialCharacters = functionArray.getRandomSymbol();
-      // minimumCount++;
-    } else {
-      alert("You pressed cancel!");
-    };
+    console.log(getRandomSymbol);
+  }
+
   if (selectedFunctionsArray.length) {
     for (var i = 0; i < (parseInt(length)); i++) {
-      var passwordText = selectedFunctionsArray[Math.floor(Math.random() * selectedFunctionsArray.length)];
+      var selectedFunctionsArray = selectedFunctionsArray[Math.floor(Math.random() * selectedFunctionsArray.length)];
       password = password + character; }
-  } else {
-    alert("You need to select at least one user option!")
+    } else {
+    alert("You need to select at least one option from lowercase letters, uppercase letters, numbers, and special characters! Please try again!")
+    }
   }
-  
-passwordText.value = password; 
-} else {
-  alert("Invalid response. You must pick a number between 8 and 128.");
-}
-  // password += functionArray[getRandomNumber]();
-  }
-  // var minimumCount = 0;
-  // var minimumLowerCases = "";
-  // var minimumUpperCases = "";
-  // var minimumNumbers = "";
-  // var minimumSpecialCharacters = "";
-
-  // password =+ minimumLowerCases;
-  // password =+ minimumUpperCases;
-  // password =+ minimumNumbers;
-  // password =+ minimumSpecialCharacters;
-
-  function generatePassword() {
-    var options = userChoices();
-  }
-
-  // var functionArray = {
-  //   getRandomLower: function() {
-  //     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
-  //   },
-
-  //   getRandomUpper: function() {
-  //     return String.fromCharCode(Math.floor(Math.random() * 26) +65);
-  //   },
-
-  //   getRandomNumber: function() {
-  //     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
-  //   },
-
-  //   getRandomSymbol: function() {
-  //     const symbols = '!@#$%^&*(){}[]=<>?,.';
-  //     return symbols[Math.floor(Math.random() * symbols.length)];
-  // }
-// }
+};
 
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
 }
 
 // Add event listener to generate button
