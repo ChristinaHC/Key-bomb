@@ -4,7 +4,7 @@
 * CSS
 * JavaScript
 
-![alt text](https://github.com/ChristinaHC/Key-bomb/blob/main/Develop/images/pwgen-ss.jpg)
+![alt text](https://github.com/ChristinaHC/Key-bomb/blob/main/images/pwgen-ss.jpg)
 
 ## Website
 https://christinahc.github.io/Key-bomb/
