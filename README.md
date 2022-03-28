@@ -4,6 +4,7 @@
 * CSS
 * JavaScript
 
+## Screenshots
 ![alt text](https://github.com/ChristinaHC/Key-bomb/blob/main/images/pwgen-ss.jpg)
 
 ## Website
